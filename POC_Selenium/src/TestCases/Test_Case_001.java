@@ -9,6 +9,7 @@ public class Test_Case_001 {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\klopezpaz\\Documents\\selenium\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver ();
+        driver.manage().window().maximize();
 		driver.get("https://cms.demo.katalon.com/my-account");
 		driver.findElement(By.id("username")).sendKeys("customer");
 		driver.findElement(By.id("password")).sendKeys("crz7mrb.KNG3yxv1fbn");
