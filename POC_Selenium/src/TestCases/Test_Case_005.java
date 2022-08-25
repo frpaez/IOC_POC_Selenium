@@ -1,5 +1,6 @@
 package TestCases;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ public class Test_Case_005 {
 		driver.findElement(By.name("user-name")).sendKeys("standard_user");
 		driver.findElement(By.name("password")).sendKeys("secret_sauce");
 		driver.findElement(By.name("login-button")).click();
-		
+		Assert.assertTrue(driver.findElement(By.className("shopping_cart_link")).isDisplayed());
 		//driver.findElement(By.className("shopping_cart_link")).click();
 		//driver.findElement(By.id("continue-shopping")).click();
 		//driver.findElement(By.linkText("Sauce Labs Backpack")).click();

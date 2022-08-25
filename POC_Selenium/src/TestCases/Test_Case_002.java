@@ -1,5 +1,6 @@
 package TestCases;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,7 @@ public class Test_Case_002 {
 		driver.findElement(By.id("username")).sendKeys("customer");
 		driver.findElement(By.id("password")).sendKeys("crz7mrb.KNG3yxv");
 		driver.findElement(By.className("woocommerce-button")).click();
+		Assert.assertTrue(driver.findElement(By.linkText("Lost your password?")).isDisplayed());
 		driver.close();
 
 	}

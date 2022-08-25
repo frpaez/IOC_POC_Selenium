@@ -1,6 +1,7 @@
 package TestCases;
 
 import org.junit.Test;
+import org.junit.Assert;  
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +16,7 @@ public class Test_Case_001 {
 		driver.findElement(By.id("username")).sendKeys("customer");
 		driver.findElement(By.id("password")).sendKeys("crz7mrb.KNG3yxv1fbn");
 		driver.findElement(By.className("woocommerce-button")).click();
+		Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
 		driver.close();
 
 	}

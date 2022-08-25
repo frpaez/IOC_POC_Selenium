@@ -1,5 +1,6 @@
 package TestCases;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +16,11 @@ public class Test_Case_004 {
 		driver.findElement(By.name("user-name")).sendKeys("locked_out_user");
 		driver.findElement(By.name("password")).sendKeys("secret_sauce");
 		driver.findElement(By.name("login-button")).click();
-		
+		Assert.assertTrue(driver.findElement(By.className("error-button")).isDisplayed());
+		driver.close();
 		//driver.findElement(By.id("react-burger-menu-btn")).click();
 		//driver.findElement(By.id("logout_sidebar_link")).click();
-		driver.close();
-		
+				
 
 	}
 
