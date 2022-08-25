@@ -1,5 +1,6 @@
 package TestCases;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ public class Test_Case_003 {
 		driver.findElement(By.id("UsernameOrEmail")).sendKeys("cromansantillan");
 		driver.findElement(By.id("Password")).sendKeys("Test9876");
 		driver.findElement(By.className("btn-login")).click();
+		Assert.assertFalse(driver.findElement(By.linkText("LOG IN")).isDisplayed());
 		driver.close();
 
 	}
